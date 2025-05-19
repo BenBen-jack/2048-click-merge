@@ -1,0 +1,28 @@
+# u64cdu4f5cu7cfbu7edfu6587u4ef6
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# u7f16u8f91u5668u548cu4e34u65f6u6587u4ef6
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime*
+
+# u65e5u5fd7u6587u4ef6
+*.log
+
+# u4e2au4ebau914du7f6eu6587u4ef6
+.env
+.env.local
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock

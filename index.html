@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>改进版2048游戏</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-section">
+            <h1>2048点击合并版</h1>
+            <div class="info-container">
+                <div class="info-box">
+                    <div class="info-label">分数</div>
+                    <div id="score" class="info-value">0</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">剩余步数</div>
+                    <div id="steps" class="info-value">60</div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">时间</div>
+                    <div id="timer" class="info-value">00:00</div>
+                </div>
+            </div>
+            <div class="grid-container">
+                <div class="grid-cell" data-row="0" data-col="0"></div>
+                <div class="grid-cell" data-row="0" data-col="1"></div>
+                <div class="grid-cell" data-row="0" data-col="2"></div>
+                <div class="grid-cell" data-row="0" data-col="3"></div>
+                <div class="grid-cell" data-row="1" data-col="0"></div>
+                <div class="grid-cell" data-row="1" data-col="1"></div>
+                <div class="grid-cell" data-row="1" data-col="2"></div>
+                <div class="grid-cell" data-row="1" data-col="3"></div>
+                <div class="grid-cell" data-row="2" data-col="0"></div>
+                <div class="grid-cell" data-row="2" data-col="1"></div>
+                <div class="grid-cell" data-row="2" data-col="2"></div>
+                <div class="grid-cell" data-row="2" data-col="3"></div>
+                <div class="grid-cell" data-row="3" data-col="0"></div>
+                <div class="grid-cell" data-row="3" data-col="1"></div>
+                <div class="grid-cell" data-row="3" data-col="2"></div>
+                <div class="grid-cell" data-row="3" data-col="3"></div>
+            </div>
+            <button id="restart-button">重新开始</button>
+        </div>
+        <div class="leaderboard-section">
+            <h2>排行榜</h2>
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>分数</th>
+                        <th>用时</th>
+                        <th>剩余步数</th>
+                        <th>评分</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body">
+                    <!-- 排行榜数据将在JS中动态生成 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="game-over" class="modal">
+        <div class="modal-content">
+            <h2 id="game-over-message">游戏结束</h2>
+            <div class="fireworks-container" id="fireworks-container"></div>
+            <p id="game-over-score">得分: 0</p>
+            <p id="game-over-time">用时: 00:00</p>
+            <p id="game-over-steps">剩余步数: 0</p>
+            <p id="game-over-rating">评分: 0</p>
+            <button id="restart-button-modal">重新开始</button>
+        </div>
+    </div>
+    <div id="pressure-indicator" class="pressure-indicator"></div>
+    <script src="game_fixed.js"></script>
+</body>
+</html>
